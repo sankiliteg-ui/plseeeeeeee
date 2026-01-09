@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Sorry Bestie ANNU</title>
+<style>
+body{
+    margin:0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: #fff;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+}
+.card{
+    max-width:700px;
+    background: rgba(0,0,0,0.55);
+    padding:40px;
+    border-radius:20px;
+    box-shadow:0 0 30px rgba(0,0,0,0.6);
+    text-align:center;
+}
+
+/* 🖼️ DP Pulse */
+.dp{
+    width:130px;
+    height:130px;
+    border-radius:50%;
+    object-fit:cover;
+    border:4px solid #ff9aa2;
+    margin-bottom:20px;
+    animation:pulse 3s ease-in-out infinite;
+}
+@keyframes pulse{
+    0%{transform:scale(1);box-shadow:0 0 15px rgba(255,154,162,0.5);}
+    50%{transform:scale(1.05);box-shadow:0 0 30px rgba(255,154,162,0.9);}
+    100%{transform:scale(1);box-shadow:0 0 15px rgba(255,154,162,0.5);}
+}
+
+h1{font-size:36px;margin-bottom:10px;}
+h1 span{color:#ff9aa2;}
+p{font-size:18px;line-height:1.8;opacity:0.95;}
+.heart{font-size:40px;margin:20px 0;}
+.signature{margin-top:25px;font-style:italic;opacity:0.8;}
+footer{margin-top:20px;font-size:14px;opacity:0.6;}
+
+/* 💌 Forgive Me Button */
+.forgive-btn{
+    margin-top:25px;
+    padding:14px 32px;
+    font-size:18px;
+    border:none;
+    border-radius:30px;
+    background: linear-gradient(135deg,#ff9aa2,#ff6f91);
+    color:#fff;
+    cursor:pointer;
+    box-shadow:0 0 20px rgba(255,154,162,0.6);
+    transition:transform 0.3s ease, box-shadow 0.3s ease;
+}
+.forgive-btn:hover{
+    transform:scale(1.08);
+    box-shadow:0 0 35px rgba(255,154,162,0.9);
+}
+
+/* 💬 Message */
+.message{
+    display:none;
+    margin-top:20px;
+    font-size:18px;
+    color:#ffdede;
+    animation:fadeIn 1s ease forwards;
+}
+@keyframes fadeIn{
+    from{opacity:0;transform:translateY(10px);}
+    to{opacity:1;transform:translateY(0);}
+}
+
+/* 📱 Mobile */
+@media(max-width:600px){
+    .card{padding:25px;}
+    h1{font-size:28px;}
+    p{font-size:16px;}
+    .dp{width:110px;height:110px;}
+}
+</style>
+</head>
+<body>
+
+<div class="card">
+
+    <img src="annuuu.jpeg" alt="Bestie ANNU" class="dp">
+
+    <h1>Sorry <span>ANNU</span> 😔</h1>
+
+    <div class="heart">💔🥺</div>
+
+    <p>
+        Shayad maine kuch galat kar diya…  
+        Par dil se kabhi tumhe khona nahi chaha 🤍
+    </p>
+
+    <p>
+        Agar meri wajah se dard hua ho,  
+        toh sach me sorry hoon 😞
+    </p>
+
+    <!-- 💌 Button -->
+    <button class="forgive-btn" onclick="forgive()">
+        💌 Forgive Me
+    </button>
+
+    <!-- 💬 Message -->
+    <div class="message" id="msg">
+        Thank you for listening…  
+        Chahe maaf karo ya nahi,  
+        tum hamesha meri bestie rahogi 🤍🥺
+    </div>
+
+    <div class="signature">
+        – Tumhara bhai💙
+    </div>
+
+    <footer>
+        Sometimes silence hurts more than words… 💭
+    </footer>
+</div>
+
+<script>
+function forgive(){
+    document.getElementById("msg").style.display="block";
+}
+</script>
+
+</body>
+</html>
